@@ -3,6 +3,7 @@
     <el-form ref="form" :rules="rules" :model="formModel" label-width="80px">
       <el-form-item v-if="isField" :prop="schema.prop" :label="schema.label">
         <component
+          v-bind="schema.props"
           :is="schema.component"
           v-model="formModel[schema.prop]"
           :schema="schema"
@@ -16,6 +17,7 @@
           :label="val.label"
         >
           <component
+            v-bind="val.props"
             :is="val.component"
             v-model="formModel[key]"
             :schema="val"
