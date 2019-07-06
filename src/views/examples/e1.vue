@@ -20,7 +20,6 @@ export default {
       schema: {
         title: {
           component: "el-input",
-          type: String,
           props: {
             class: "content-title",
             type: "text",
@@ -39,7 +38,6 @@ export default {
         },
         poster: {
           component: "sfc-image-uploader",
-          type: String,
           rules: [
             {
               required: true,
